@@ -1,0 +1,129 @@
+<view class="component">
+    <view class="component-mask"></view>
+    <view class="invite">
+        <view class="invite-content">
+            <view class="invite-header" wx:if="{{title}}">
+                <label>{{title}}</label>
+            </view>
+            <view class="invite-body">
+                <view wx:if="{{data.type==0}}">
+                    <view class="item">
+                        <label class="label">公司</label>
+                        <view class="value nowrap">{{data.companyName}}</view>
+                    </view>
+                    <view class="item">
+                        <label class="label">联系人</label>
+                        <view class="value link">
+                            <view wx:for="{{data.links}}" class="link-item {{item.checked?'selected':''}}" data-index="{{index}}" bindtap="_onLink">
+                                <label class="link-name">{{item.name}}</label>
+                                <label class="link-job">({{item.job}})</label>
+                            </view>
+                            <!-- <view class="link-item selected">
+                                        <label class="link-name">达达</label>
+                                        <label class="link-job">(副总经理)</label>
+                                    </view>
+                                    <view class="link-item">
+                                        <label class="link-name">达达</label>
+                                        <label class="link-job">(总经理)</label>
+                                    </view>
+                                    <view class="link-item">
+                                        <label class="link-name">达达</label>
+                                        <label class="link-job">(副总经理)</label>
+                                    </view>
+                                    <view class="link-item">
+                                        <label class="link-name">达达</label>
+                                        <label class="link-job">(总经理)</label>
+                                    </view> -->
+                        </view>
+                    </view>
+                    <view class="item">
+                        <label class="label">预约地点</label>
+                        <view class="value">
+                            <radio-group class="addr" bindchange="_onAddr">
+                                <view wx:for="{{data.addrs}}" class="radio">
+                                    <view>
+                                        <radio color='#6288d5' value="{{item.value}}" checked="{{item.checked}}" data-index="{{index}}" />
+                                    </view>
+                                    <view>{{item.value}}</view>
+                                </view>
+                                <!-- <view class="radio">
+                                            <view>
+                                                <radio color='#6288d5' value="{{item.value}}" checked="{{item.checked}}" />
+                                            </view>
+                                            <view>D-506</view>
+                                        </view> -->
+                            </radio-group>
+                        </view>
+                    </view>
+                </view>
+                <view wx:if="{{data.type==1}}">
+                    <view class="item">
+                        <label class="label">联系人</label>
+                        <view class="value nowrap">
+                            {{data.link.name}}({{data.link.job}})
+                            <text class="mob">{{data.link.mob}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="item">
+                    <label class="label">预约地点</label>
+                    <view class="value">{{data.addr}}</view>
+                </view>
+                <view class="item">
+                    <label class="label">预约时间</label>
+                    <view class="value">
+                        <view class="btn-time">
+                            <view class="time-value {{selected_dateTime.date.value&&selected_dateTime.date.show?'':'placeholder'}}" bindtap="_onOpenDateTimePicker">{{selected_dateTime.date.value&&selected_dateTime.date.show?selected_dateTime.date.value:'请选择预约时间'}}
+                                {{selected_time.value||''}}
+                            </view>
+                            <view>
+                                <i class="iconfont icon-arrow-right"></i>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="item">
+                    <label class="label">通知内容</label>
+                    <view class="value">
+                        <view class="content">
+                            {{data.type==0?content:data.content}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="invite-footer">
+
+                <view class='btn-group'>
+                    <view class='btn' bindtap='_onCancel'>取消</view>
+                    <view class='btn btn-primary' bindtap='_onConfirm'>确定</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:if="{{show_datetime_picker}}" class="datetime-picker">
+        <view class="datetime-picker-mask" bindtap="_onCloseDateTimePicker"></view>
+        <view class="datetime-picker-content">
+            <view class="datetime-picker-body">
+                <view class="date">
+                    <view wx:for="{{data.dateTime}}" class="date-item {{item.date.checked?'selected':''}}" bindtap="_onDateSelected" data-index="{{index}}">{{item.date.value}}</view>
+                </view>
+                <view class="time">
+                    <view class="morning">
+                        <view class="time-title">上午</view>
+                        <view class="time-body">
+                            <view wx:for="{{selected_dateTime.times.afternoon}}" class="time-item {{item.checked?'selected':''}} {{item.isFree==false?'disable':''}} "
+                                bindtap="{{item.isFree==false?'':'_onTimeSelected'}}" data-type="morning" data-index="{{index}}">{{item.value}}</view>
+                        </view>
+                    </view>
+                    <view class="afternoon">
+                        <view class="time-title">下午</view>
+                        <view class="time-body">
+                            <view wx:for="{{selected_dateTime.times.afternoon}}" class="time-item {{item.checked?'selected':''}} {{item.isFree==false?'disable':''}} "
+                                bindtap="{{item.isFree==false?'':'_onTimeSelected'}}" data-type="afternoon" data-index="{{index}}">{{item.value}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

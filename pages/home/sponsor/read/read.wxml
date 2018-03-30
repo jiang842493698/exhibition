@@ -1,0 +1,58 @@
+<view class='page'>
+     <view class="search {{filter.length>0?'':'search_not_value'}}">
+        <view class='search-body'>
+            <view class='search-input'>
+                <view class="search-box">
+                    <view class='search-icon'>
+                        <i class="iconfont icon-search"></i>
+                    </view>
+                    <input type='search' auto-focus placeholder='请按照手机号查询' bindinput='onFilterInput' value="{{filter}}"></input>
+                    <view class='search-delete' bindtap='onFilterDelete'>
+                        <i class="iconfont icon-guanbi_r"></i>
+                    </view>
+                </view>
+            </view>
+            <view class='search-btn' bindtap='onTapSearch'>
+                <view>搜索</view>
+            </view>
+        </view>
+    </view> 
+    <view class='page-body' wx:if="{{tab_index=='已阅读'}}">
+        <view class="list">
+            <view class="list-item" >
+                <!-- <view wx:if="{{item.status=='all'}}"> -->
+                  <view wx:if="{{datas.length>0}}" wx:for="{{datas}}" wx:for-item="groups" class="group">
+                    <view class="title">
+                      <view class='qian'>
+                        <label class="name">{{groups.Name}}</label>
+                        <label class="job">({{groups.Job}})</label>
+
+                      </view>
+                      <view class='userName'>{{groups.UserName}}</view>
+                      <view class='date'>{{groups.Date}}</view>
+                    </view>
+                    
+                    
+                    <view class="company">{{groups.CompanyName}}</view>
+
+                  </view>
+                  <view wx:if="{{datas.length==0}}">
+                    <view class="title">
+                      <label class="name">没有任何阅读的展商</label>
+                    </view>
+                    
+                  </view>
+                <!-- </view> -->
+                <!-- <view wx:if="{{item.status=='single'}}">
+                  <view class="title">
+                    <label class="name">{{item.State=="0"?"商家未阅读":"商家已阅读"}}</label>
+                    
+                  </view>
+                  
+                </view> -->
+            </view>
+           
+        </view>
+    </view>
+    
+</view>

@@ -1,0 +1,67 @@
+ <view class="page">
+    <view class="page-body">
+        <view wx:for="{{message}}" class="list {{index===delete_index?'delete':''}}"  data-id="{{item.RecordId}}" >
+          <view data-index="{{index}}" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd" >
+            <navigator url="/pages/home/sponsor/read/read?id={{item.RecordId}}&type={{Type}}" class="list-item {{item.isTouchMove?'delete':''}}" >
+              <view class="list-body">
+                  <view class="list-title">
+                      <view class="unread" hidden='{{tem.State==1?false:true}}'></view>
+                      <view class="title">{{item.Title==""?'主办消息':item.Title}}</view>
+                      <view class="date">
+                          
+                          <label>{{item.time}}</label>
+                      </view>
+                  </view>
+                  <view class="list-content">
+                    {{item.Content}}
+                  </view>
+                  <view class='tubiao'>
+                    <i class="iconfont icon-p-see"></i>
+                    <view class='shuliang'>
+                    {{item.Group.length}}
+                    </view>
+                  </view>
+              </view>
+              <view class="list-delete">
+                  <text>删除</text>
+              </view>
+            </navigator>
+          
+          </view>
+            
+        </view>
+    </view>
+</view> 
+<!-- <view class="page">
+    <view class="page-body">
+        <view wx:if="{{message.length>0}}" class="list">
+            <view wx:for="{{message}}" class="list-item  {{index===delete_index?'delete':''}}" bindtap="onRead" data-id="{{item.RecordId}}" >
+                <view class="list-body" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd" data-index="{{index}}">
+                    <view class="list-title">
+                        <view class="unread" wx:if="{{item.State=='0'}}"></view>
+                        <view class="title">{{item.Title}}</view>
+                        <view class="date">{{item.time}}</view>
+                    </view>
+                    <view class="list-content">
+                        {{item.Content}}
+                    </view>
+                </view>
+                <view class="list-delete"  catchtap="onDelete" data-id="{{item.RecordId}}">
+                    <text>删除</text>
+                </view>
+            </view>
+        </view>
+        <view wx:if="{{message.length==0}}" class="no_content">暂无通知</view>
+    </view>
+</view> -->
+
+<navigator url="/pages/home/sponsor/write/write" wx:if="{{type==4||type==3}}" class="chat-in">
+    <view>
+        <view>
+            <i class="iconfont icon-bianji"></i>
+        </view>
+        <view>
+            <label>写通知</label>
+        </view>
+    </view>
+</navigator>

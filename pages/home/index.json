@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#7b8bed",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "reject-invite": "/component/reject-invite/reject-invite"
+  }
+}

@@ -1,0 +1,96 @@
+
+.page-header{
+    text-align: center;
+}
+.head{
+    padding-top: 80rpx;
+    padding-bottom: 60rpx;
+}
+.head image{
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 50%;
+}
+.nick{
+    font-size: 40rpx;
+    padding-bottom: 50rpx;
+}
+.welcome{
+    font-size:28rpx;
+    color: #888;
+    padding-bottom: 60rpx; 
+}
+.btn-code{
+    font-size:26rpx;
+    color: #6288d5; 
+    border: 1rpx solid #6288d5;
+    background: #fff;
+}
+.jy{
+    color: #6288d5; 
+    border: 1rpx solid #888;
+}
+.page-footer{
+    padding: 80rpx 0;
+}
+
+.btn-code:active{
+    opacity: .6;
+}
+
+/**=====================cell======================**/
+
+.cell{
+    position: relative;
+    padding-top: 14rpx;
+    line-height: 2.7;
+    font-size: 34rpx;
+
+}
+.cell-title{
+    padding-left:32rpx;
+    font-size: 28rpx;
+    color: #888;
+}
+.cell-list{
+    background-color: #fff;
+    border-top: 1rpx solid #e5e5e5;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+
+.cell-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1rpx solid #e5e5e5;
+    margin-left: 34rpx;
+    padding-right: 30rpx;
+    background-color: #fff;
+}
+.cell-item:last-child{
+    border-bottom: 0;
+}
+.cell-header{
+    padding-right:54rpx; 
+}
+.cell-header i{
+    color: #6288d5;
+}
+.cell-body{
+    flex: 1;
+}
+.cell-footer{
+    text-align: right;
+    color: #999;
+}
+/*
+.cell-list view:last-child{
+    border:0;
+}
+*/
+/* 带跳转的cell*/
+.cell-nav-hover{
+    opacity: 0.3;
+    background: #f0f0f0
+}

@@ -1,0 +1,26 @@
+<view class="page">
+        <view class="page-body">
+            <view class='cell'>
+                <view class='cell-group'>
+                    <navigator hover-class="nav-hover" url="/pages/settings/invite/templet/edit/edit?feet=ExhibitorReceive" class='cell-item'>
+                        <view class='cell-item-b'>展商收到约请</view>
+                        <view class='cell-item-f'>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </view>
+                    </navigator>
+                    <navigator hover-class="nav-hover" url="/pages/settings/invite/templet/edit/edit?feet=ExhibitorSend" class='cell-item'>
+                        <view class='cell-item-b'>展商发出约请</view>
+                        <view class='cell-item-f'>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </view>
+                    </navigator>
+                    <navigator hover-class="nav-hover" url="/pages/settings/invite/templet/edit/edit" class='cell-item'>
+                        <view class='cell-item-b'>展商约请审核未通过</view>
+                        <view class='cell-item-f'>
+                            <i class="iconfont icon-arrow-right"></i>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>

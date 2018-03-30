@@ -1,0 +1,41 @@
+
+.title{
+    font-size: 34rpx;
+    padding: 30rpx;
+    background-color: #fff;
+    display: flex;
+    
+}
+.name{
+  width: 200rpx;
+  height: 50rpx;
+  text-align: center;
+}
+.name.selected {
+    width: 200rpx;
+    background-color: #6288D6;
+    color: #fff;
+}
+.content{
+
+    padding: 30rpx;
+    margin-top: 10rpx;
+    background-color: #fff;
+}
+.content textarea{
+    width: 100%;
+    min-height: 200rpx;
+    font-size: 30rpx;
+}
+.wrap{
+    margin-top: 50rpx;
+    font-size: 28rpx;
+    padding: 30rpx;
+    color: #666;
+}
+.wrap-title{
+    font-size: 30rpx;
+}
+.key{
+
+}

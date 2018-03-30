@@ -1,0 +1,17 @@
+<!--pages/home/sponsor/write/write.wxml-->
+<view>
+  <view class='cell'>
+    <!-- <view>标题</view> -->
+    <view class='titleClass'>
+      <input class='title' value='' name= 'title' placeholder='请输入消息标题' bindinput='onTitle' ></input>
+    </view>
+    <view class='writeInfo'>
+      <textarea  placeholder='请填写消息内容' class='writeTextarea' focus placeholder-style = "color:#808080;" maxlength='-1' bindinput='writeSMS' ></textarea>
+    </view>
+    <view class='writeTitle'>
+      <button class='write_tell' bindtap='onselect' data-type='2'>给所有展商发消息</button>
+      <button class='write_tell'  bindtap='onselect' data-type='1'>给所有观众发消息</button>
+      <!-- <button class='write_tell'  bindtap='onselect' data-type='0'>给所有人发短信</button> -->
+    </view>
+  </view>
+</view>

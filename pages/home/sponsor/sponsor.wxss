@@ -1,0 +1,174 @@
+/* .list {
+    margin-top: 20rpx;
+}
+
+.list-item {
+    display: flex;
+    width: 915rpx;
+    border-bottom: 1rpx solid #efeff4;
+    align-items: center;
+    background-color: #ff3b30;
+}
+
+.list-body {
+    background-color: #fff;
+    float: left;
+    width: 750rpx;
+    transition: all .4s ease-in-out;
+}
+.list-body:active{
+    background-color: #eee;
+}
+.list-title {
+    padding: 30rpx;
+    padding-bottom: 16rpx;
+    display: flex;
+    align-items: center;
+}
+
+.list-title .title {
+    flex: 1;
+    font-size: 32rpx;
+    color: #222;
+}
+
+.list-title .date {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.list-content {
+    font-size: 28rpx;
+    color: #999;
+    margin: 30rpx;
+    margin-top: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.list-delete {
+    transition: all .4s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    width: 165rpx;
+    font-size: 36rpx;
+    color: #fff;
+     padding:50rpx 0; 
+}
+
+.list-delete:active {
+    opacity: .6;
+}
+
+.list-item.delete .list-body {
+    margin-left: -165rpx;
+}
+
+.unread{
+    background-color: #fe5e18;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    margin-right: 16rpx;
+} */
+          .list {
+    margin-top: 20rpx;
+}
+
+.list-item {
+    display: flex;
+    width: 915rpx;
+    border-bottom: 1rpx solid #efeff4;
+    align-items: center;
+    background-color: #ff3b30;
+}
+
+.list-body {
+    background-color: #fff;
+    float: left;
+    width: 750rpx;
+    transition: all .4s ease-in-out;
+}
+
+.list-body:active {
+    background-color: #eee;
+}
+
+.list-title {
+    padding: 30rpx;
+    padding-bottom: 16rpx;
+    display: flex;
+    align-items: center;
+}
+
+.list-title .title {
+    flex: 1;
+    font-size: 32rpx;
+    color: #222;
+}
+
+.list-title .date {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.list-content {
+    font-size: 28rpx;
+    color: #999;
+    margin: 30rpx;
+    margin-top: 0;
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden; */
+    min-height: 30rpx;
+}
+
+.list-delete {
+    transition: all .4s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    width: 165rpx;
+    font-size: 36rpx;
+    color: #fff;
+    padding: 50rpx 0;
+}
+
+.list-delete:active {
+    opacity: .6;
+}
+
+.list-item.delete .list-body {
+    margin-left: -165rpx;
+}
+
+.unread {
+    background-color: #fe5e18;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    margin-right: 16rpx;
+}
+
+.no_content {
+    text-align: center;
+    padding-top: 50rpx;
+    color: #888;
+    font-size:24rpx;
+
+}
+.tubiao{
+  
+  position: fixed;
+  margin-top:-35rpx;
+
+  margin-left:600rpx;
+  font-size: 20rpx;
+}
+.shuliang{
+  margin-top:-33rpx;
+  margin-left:41rpx;
+  color: #999;
+}

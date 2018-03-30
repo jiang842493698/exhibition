@@ -1,0 +1,119 @@
+.page {
+    background: #fff;
+}
+
+.page-header {
+    background: url("http://img.huizhanren.cn/rex/Uploads/2017.11/1c7e7531-641d-406c-ac7c-35ce041cd352.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    height: 320rpx;
+}
+
+.user {
+    display: flex;
+    background-color: #78a1f5;
+    padding: 30rpx;
+    padding-top: 70rpx;
+    color: #fff;
+    align-items: center;
+}
+
+.user-logo {
+    margin-right: 30rpx;
+}
+
+.user-logo image {
+    border: 1rpx solid #ebebeb;
+    border-radius: 50%;
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.user-name .company {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    font-size: 36rpx;
+}
+
+.user-name .date {
+    margin-right: 10rpx;
+}
+
+.user-name .date, .user-name .addr {
+    font-size: 28rpx;
+}
+
+.cell {
+    font-size: 34rpx;
+    padding-top: 50rpx;
+}
+
+.cell-group {
+    margin-bottom: 20rpx;
+    background: #fff;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+
+.cell-item {
+    display: flex;
+    display: -webkit-flex;
+    padding: 30rpx;
+    padding-left: 0;
+    border-bottom: 1rpx solid #e5e5e5;
+    align-items: center;
+    background-color: #fff;
+}
+
+.cell-item:active {
+    opacity: .6;
+}
+
+.cell-group .cell-item:last-child {
+    border-bottom: 0;
+}
+
+.cell-item-h {
+    padding: 0 30rpx;
+    align-items: center;
+}
+
+.cell-item-h image {
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+}
+
+.cell-item-b {
+    flex: 1;
+    padding-left: 30rpx;
+}
+
+.cell-item-h i {
+    color: #6ab7f2;
+    font-size: 40rpx;
+}
+
+.cell-item-f {
+    color: #c7c7cc;
+}
+
+.badge {
+    display: flex;
+    display: -webkit-flex;
+    background: #f18114;
+    color: #fff;
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24rpx;
+    align-items: center;
+    margin-right: 16rpx;
+}
+
+.badge>view {
+    width: 100%;
+}

@@ -1,0 +1,46 @@
+<view class="page">
+    <view class="page-header">
+        <view class="user">
+            <view class="user-logo">
+                <image src="/assets/images/other/not_logo.png"></image>
+            </view>
+            <view class="user-name">
+                <view class="company">{{userInfo.OrganizationName}}</view>
+                <view class="other">
+                    <label class="date">{{userInfo.time}}</label>
+                    <label class="addr">{{exInfo.Place}}</label>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='page-body'>
+        <view class='cell'>
+            <view class='cell-group'>
+                <navigator hover-class="nav-hover" url="/pages/settings/invite/invite" class='cell-item'>
+                    <view class='cell-item-b'>约请设置</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <navigator hover-class="nav-hover" url="/pages/settings/sms/sms" class='cell-item'>
+                    <view class='cell-item-b'>短信设置</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <view hover-class="nav-hover" bindtap='navhover' class='cell-item'>
+                    <view class='cell-item-b'>下届参展</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </view>
+                <navigator hover-class="nav-hover" url="" class='cell-item'>
+                    <view class='cell-item-b'>展商问卷</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>

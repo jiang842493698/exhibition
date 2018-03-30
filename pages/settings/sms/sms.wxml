@@ -1,0 +1,28 @@
+<view class="page">
+    <view class="page-body">
+        <view class='cell'>
+            <view class='cell-group'>
+                <navigator hover-class="nav-hover" url="" class='cell-item'>
+                    <view class='cell-item-b'>短信账号</view>
+                    <view class="cell-item-value">{{result.Name}}</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <navigator hover-class="nav-hover" url="" class='cell-item'>
+                    <view class='cell-item-b'>短信签名</view>
+                    <view class="cell-item-value">{{SmsSign.Content}}</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <navigator hover-class="nav-hover" url="/pages/settings/sms/templet/templet" class='cell-item'>
+                    <view class='cell-item-b'>短信模板</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>

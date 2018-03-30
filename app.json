@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/home/index"
+    ,"pages/home/sponsor/sponsor"
+    ,"pages/home/sponsor/read/read"
+    
+    ,"pages/examine/index"
+
+    ,"pages/settings/index"
+    ,"pages/settings/invite/invite"
+    ,"pages/settings/invite/schedule/schedule"
+    ,"pages/settings/invite/key-filter/key-filter"
+    ,"pages/settings/invite/templet/templet"
+    ,"pages/settings/invite/templet/edit/edit"
+    ,"pages/settings/sms/sms"
+    ,"pages/settings/sms/templet/templet"
+    ,"pages/home/sponsor/select/select"
+    ,"pages/login/index"
+    ,"pages/home/sponsor/write/write"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "CEP",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#EFEFF4"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+    "component": true,
+    "tabBar": {
+      "color": "#7f8389",
+      "selectedColor": "#5b8bed",
+      "list": [
+        {
+          "pagePath": "pages/home/index",
+          "text": "首页",
+          "iconPath": "/assets/images/tabbar/home.png",
+          "selectedIconPath": "/assets/images/tabbar/home_selected.png"
+        },
+        {
+          "pagePath": "pages/examine/index",
+          "text": "审核",
+          "iconPath": "/assets/images/tabbar/auditor.png",
+          "selectedIconPath": "/assets/images/tabbar/auditor_selected.png"
+        },
+        {
+          "pagePath": "pages/settings/index",
+          "text": "设置",
+          "iconPath": "/assets/images/tabbar/settings.png",
+          "selectedIconPath": "/assets/images/tabbar/settings_selected.png"
+        }
+       
+      ]
+    }
+}

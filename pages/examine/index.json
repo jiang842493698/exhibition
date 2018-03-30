@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "审核",
+  "usingComponents": {
+    "reject-invite": "/component/reject-invite/reject-invite"
+  }
+}

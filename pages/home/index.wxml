@@ -1,0 +1,206 @@
+<view class="page">
+    <view class="page-body">
+         <view wx:for="{{message}}"> 
+          <view class="m-cell">
+              <navigator url="/pages/home/sponsor/sponsor?id={{item.Type}}" hover-class="none" class="cell-item">
+                  <view class="cell-body">
+                      <view class="cell-left">
+                          <view class="cell-icon">
+                              <view class="cell-badge">
+                                  <image src='{{item.image}}'></image>
+                                  
+                                      <view wx:for="{{count}}" wx:for-item="it">
+                                        <view wx:if="{{item.Type==it.type}}">
+                                         <view class="badge-body" hidden='{{it.show}}'>
+                                          <text class="badge badge-orange" >{{it.count}}</text>
+                                        </view>
+                                      </view>
+                                      
+                                  </view>
+                              </view>
+                          </view>
+                      </view>
+                      <view class="cell-right">
+                          <view class="msg-title">
+                              <view class="title">{{item.Type==4?"主办":item.Type==2?"系统":item.Type==5?"约请":"活动"}}</view>
+                              <view class="date">{{item.time}}</view>
+                          </view>
+                          <view class="msg-content">
+                              {{item.Content}}
+                          </view>
+                      </view>
+                  </view>
+              </navigator>
+          </view> 
+         </view>
+        <!-- <view class="m-cell">
+            <navigator url="/pages/home/sponsor/sponsor?id={{item.RecordId}}" hover-class="none" class="cell-item">
+                <view class="cell-body">
+                    <view class="cell-left">
+                        <view class="cell-icon">
+                            <view class="cell-badge">
+                                <image src='/assets/images/icon/msg/notice.png'></image>
+                                <view class="badge-body">
+                                    <text class="badge badge-orange">1</text>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="cell-right">
+                        <view class="msg-title">
+                            <view class="title">主办</view>
+                            <view class="date">当前</view>
+                        </view>
+                        <view class="msg-content">
+                            贵司已报名参加第28届中国展，请将采购指南资 料于2月28日前递交资料资料资料资..
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </view> -->
+        <!-- <view class="m-cell">
+            <view class="cell-item">
+                <view class="cell-body">
+                    <view class="cell-left">
+                        <view class="cell-icon">
+                            <image src='/assets/images/icon/msg/settings.png'></image>
+                        </view>
+                    </view>
+                    <view class="cell-right">
+                        <view class="msg-title">
+                            <view class="title">系统</view>
+                            <view class="date">1分钟前</view>
+                        </view>
+                        <view class="msg-content">
+                            您的信息已更新
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="m-cell">
+            <view class="cell-item">
+                <view class="cell-body">
+                    <view class="cell-left">
+                        <view class="cell-icon">
+                            <image src='/assets/images/icon/msg/activity.png'></image>
+                        </view>
+                    </view>
+                    <view class="cell-right">
+                        <view class="msg-title">
+                            <view class="title">活动</view>
+                            <view class="date">10分钟前</view>
+                        </view>
+                        <view class="msg-content">
+                            红包节即将来临，邀请您参加
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>-->
+        <view class="m-cell" wx:for="{{InvitationInfoExhi}}">
+            <view class="cell-item">
+                <view class="cell-body">
+                    <view class="cell-left">
+                        <view class="cell-icon">
+                            <image src='/assets/images/icon/msg/invite.png'></image>
+                        </view>
+                    </view>
+                    <view class="cell-right">
+                        <view class="msg-title">
+                            <view class="title">
+                                <view class="title-body">
+                                    <view class="sender">
+                                        <label class="name">{{item.InitatorChild[0].Name}}</label>
+                                        <label class="job">{{item.InitatorChild[0].Job}}</label>
+                                    </view>
+                                    <view class="arrow"></view>
+                                    <view class="sendee">
+                                        <label class="name">{{item.ReceiverChild[0].Name}}</label>
+                                        <label class="job">{{item.ReceiverChild[0].Job}}</label>
+                                    </view>
+                                </view>
+                                <view class="title-footer">{{item.Receiver[0].CompanyName}}</view>
+                            </view>
+                            <view class="date">{{item.time}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="cell-content">
+                    <view class="msg-contents">
+                    {{item.centent}}
+                    </view>
+                </view>
+                <view class="cell-footer">
+                    <view class="btn btn-cancel"  bindtap='onCancel' data-item='{{item}}' data-feet='展商'> 
+                        <text>不通过</text>
+                    </view>
+                    <view class="btn btn-primary" bindtap="onAgree" data-item='{{item}}' data-feet='展商'>
+                        <text>通过</text>
+                    </view>
+                </view>
+            </view>
+        </view> 
+        <view class="m-cell" wx:for="{{matchVInfo}}">
+            <view class="cell-item">
+                <view class="cell-body">
+                    <view class="cell-left">
+                        <view class="cell-icon">
+                            <image src='/assets/images/icon/msg/invite.png'></image>
+                        </view>
+                    </view>
+                    <view class="cell-right">
+                        <view class="msg-title">
+                            <view class="title" wx:if="{{item.Type==1}}">
+                                <view class="title-body">
+                                    <view class="sender">
+                                        <label class="name">{{item.InitatorChild[0].Name}}</label>
+                                        <label class="job">{{item.InitatorChild[0].Job}}</label>
+                                    </view>
+                                    <view class="arrow"></view>
+                                    <view class="sendee">
+                                        <label class="name">{{item.VisitorReceiver[0].Name}}</label>
+                                        <label class="job">{{item.VisitorReceiver[0].Job}}</label>
+                                    </view>
+                                </view>
+                                <view class="title-footer">{{item.VisitorReceiver[0].CompanyName}}</view>
+                            </view>
+                            <view class="title" wx:if="{{item.Type==0}}">
+                                <view class="title-body">
+                                    <view class="sender">
+                                        <label class="name">{{item.VisitorInitator[0].Name}}</label>
+                                        <label class="job">{{item.VisitorInitator[0].Job}}</label>
+                                    </view>
+                                    <view class="arrow"></view>
+                                    <view class="sendee">
+                                        <label class="name">{{item.ReceiverChild[0].Name}}</label>
+                                        <label class="job">{{item.ReceiverChild[0].Job}}</label>
+                                    </view>
+                                </view>
+                                <view class="title-footer">{{item.Receiver[0].CompanyName}}</view>
+                            </view>
+                            <view class="date">{{item.time}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view class="cell-content">
+                    <view class="msg-contents">
+                        {{item.centent}}
+                    </view>
+                </view>
+                <view class="cell-footer">
+                    <view class="btn btn-cancel" bindtap='onCancel' data-item='{{item}}' data-feet='观众' >
+                        <text>不通过</text>
+                    </view>
+                    <view class="btn btn-primary" bindtap="onAgree" data-item='{{item}}' data-feet='观众'>
+                        <text>通过</text>
+                    </view>
+                </view>
+            </view>
+        </view> 
+    </view>
+</view>
+
+ <reject-invite wx:if="{{reject_invite.isShow}}" value="{{reject_invite.value}}" id="{{reject_invite.id}}" feet="{{reject_invite.feet}}" list="{{reject_invite.list}}" bindcancel="reject_inviteCancel"
+    bindconfirm="reject_inviteConfirm" bind></reject-invite> 
+    <!-- <reject-invite hidden="{{reject_invite.isShow}}"></reject-invite> -->

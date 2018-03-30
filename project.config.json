@@ -1,0 +1,97 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wxc76e61c8bd1378da",
+	"projectname": "host1",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "主办消息-已读情况",
+					"pathName": "pages/home/sponsor/read/read",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "审核",
+					"pathName": "pages/examine/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "设置",
+					"pathName": "pages/settings/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "日程设置",
+					"pathName": "pages/settings/invite/schedule/schedule",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关键字过滤",
+					"pathName": "pages/settings/invite/key-filter/key-filter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "消息模板",
+					"pathName": "pages/settings/invite/templet/templet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "消息模板-编辑",
+					"pathName": "pages/settings/invite/templet/edit/edit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "短信模板",
+					"pathName": "pages/settings/sms/templet/templet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "aaa",
+					"pathName": "pages/home/sponsor/write/write",
+					"query": ""
+				}
+			]
+		}
+	}
+}

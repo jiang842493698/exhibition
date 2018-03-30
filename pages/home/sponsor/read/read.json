@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "white",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "已阅读人员",
+  "enablePullDownRefresh": true
+}

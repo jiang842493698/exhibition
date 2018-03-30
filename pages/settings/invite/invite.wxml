@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="page-body">
+        <view class='cell'>
+            <view class='cell-group'>
+                <navigator hover-class="nav-hover" url="/pages/settings/invite/schedule/schedule" class='cell-item'>
+                    <view class='cell-item-b'>日程设置</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <view hover-class="nav-hover" class='cell-item' style="padding-top:20rpx;padding-bottom:20rpx">
+                    <view class='cell-item-b'>托管审核</view>
+                    <view class='cell-item-f'>
+                         <switch checked="{{type==1?true:false}}" bindchange="switch"/> 
+                    </view>
+                </view>
+                <navigator hover-class="nav-hover" url="/pages/settings/invite/key-filter/key-filter" class='cell-item'>
+                    <view class='cell-item-b'>关键字过滤</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+                <navigator hover-class="nav-hover" url="/pages/settings/invite/templet/templet" class='cell-item'>
+                    <view class='cell-item-b'>消息模板</view>
+                    <view class='cell-item-f'>
+                        <i class="iconfont icon-arrow-right"></i>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
