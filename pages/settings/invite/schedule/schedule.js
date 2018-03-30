@@ -146,7 +146,19 @@ Page({
       }
     }
     $.request.calendar().put(data).then(res => {
-
+      if (res.resCode == 500001){
+        wx.showModal({
+          title: '禁止修改',
+          content: '已经有用户使用了日程,不能修改',
+          success : function(e){
+            if (e.confirm){
+              wx.navigateBack({
+                delta : -1
+              })
+            }
+          }
+        })
+      }
     })
 
 
