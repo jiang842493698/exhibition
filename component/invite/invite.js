@@ -155,7 +155,7 @@ Component({
       //替换通知内容的预约地点
       this.content = this.data.data.content || '';
       let _content = this.content.replace('【ADDR】', value);
-      console.log(_content);
+      
       this.setData({ data, content: _content });
     },
     _onDateSelected(e) {

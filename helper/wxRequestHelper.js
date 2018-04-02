@@ -23,7 +23,6 @@ let _structure = (controller_Name, paramDefaults, actions, options) => {
 let _getUserInfo = (cell) => {
   let userInfo = wx.getStorageSync('userInfo');
   let exInfo = wx.getStorageSync('exInfo');
-  console.log(typeof cell == 'function')
   if (userInfo && cell && typeof cell == 'function') {
 
     cell(userInfo, exInfo)
@@ -35,7 +34,6 @@ let _getUserInfo = (cell) => {
 }
 
 let _getToken = (cell) => {
-  console.log(101010)
   let func = () => {
     let mob = wx.getStorageSync('PHONE_NUMBER');
 
@@ -94,7 +92,6 @@ class wxRequestHelper {
       /** 展商登录 */
       
       post: (userName,code) => {
-        console.log(userName)
         return http.post({ params: { UserName: userName, UserPassword:code } })//v2
       },
 
@@ -171,8 +168,7 @@ class wxRequestHelper {
               pageSize: page.pageSize
             }
           }
-          console.log("date---------")
-          console.log(data)
+         
         })) {
 
           return http.post(data);
@@ -198,8 +194,6 @@ class wxRequestHelper {
             }
           }
         })) {
-          console.log("查询消息")
-          console.log(data)
           return httpGet.post(data);
         }
       },
@@ -236,7 +230,6 @@ class wxRequestHelper {
         if (_getUserInfo((userInfo, exInfo) => {
 
         })) {
-          console.log(data)
           return httpPut.post(data);
         }
 
@@ -270,8 +263,6 @@ class wxRequestHelper {
     let http = _structure('/data/queryCount/MsgInfo')
     return {
       get: (countdate) => {
-        console.log("00000000000000000000000000")
-        console.log(countdate)
         let data = {}
         //获取用户Id/ExId
         if (_getUserInfo((userInfo, exInfo) => {
@@ -304,7 +295,6 @@ class wxRequestHelper {
     let httpPutAll = _structure('/data/updateList/InvitationInfo');
     return {
       get: (page) => {
-        console.log("888888888888")
       
         let data = {
 
@@ -368,8 +358,6 @@ class wxRequestHelper {
        */
       post: (records) => {
 
-        console.log("约请确认")
-        console.log(records)
         var data = {
           params: {
             record: { ...records }
@@ -502,8 +490,6 @@ class wxRequestHelper {
               pageSize: pageDate.pageSize
             }
           }
-          console.log("date---------")
-          console.log(data)
         })) {
 
           return http.post(data);

@@ -90,10 +90,8 @@ Page({
     _this.onSelect().then(a => {
       let resultArray = a
       let result = []
-      console.log("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL")
       for (let r of resultArray) {
         let dataJsons = {}
-        console.log(r)
         let results = r.result
         if (results.length > 0) {
           dataJsons = results[0]
@@ -103,7 +101,6 @@ Page({
       }
 
       let countMsgArray = []
-      console.log(result)
       for (let re of result) {
         let data = {
           type: re.Type,
@@ -173,14 +170,12 @@ Page({
       pageIndex: pageIndex,
       pageSize: pageSize
     }
-    console.log(page)
 
     $.request.InvitationInfoExhi().get(page).then(res => {
       if (res.resCode == 0 || res.resCode == 10000) {
         let result = res.result
         let InvitationInfoExhi = (_this.data.InvitationInfoExhi == null ? [] : _this.data.InvitationInfoExhi).concat(result)
-        console.log("pppppppppppppppppp")
-        console.log(InvitationInfoExhi)
+        
         for (let i of InvitationInfoExhi){
           let centent = i.InvitationMsgContent.replace("${展位号}", i.MeetingPlace)
           i.centent = centent
@@ -216,7 +211,6 @@ Page({
         _this.setData({
           matchVInfo
         })
-        console.log(matchVInfo)
       }
     })
     
@@ -281,7 +275,7 @@ Page({
     if (feet == "展商"){
       $.request.InvitationInfoExhi().put(data).then(res => {
         if (res.resCode == 0 /*&& res.result.nRecordMatched == "1" && res.result.nRecordUpdated == "1"*/) {
-          console.log("aaaaaaaaaa")
+          
           _this.onLoad();
         }
       })
@@ -289,7 +283,7 @@ Page({
     if (feet == "观众"){
       $.request.matchVInfo().put(data).then(res => {
         if (res.resCode == 0 /*&& res.result.nRecordMatched == "1" && res.result.nRecordUpdated == "1"*/){
-          console.log("aaaaaaaaaa")
+          
           _this.onLoad();
         }
       })
@@ -302,9 +296,6 @@ Page({
    * @param {any} e 
    */
   onCancel(e) {
-    console.log("bbbbbbbbbbbb")
-    console.log(e.currentTarget.dataset.feet)
-    console.log(e.currentTarget.dataset.id)
     let id = e.currentTarget.dataset.item.RecordId
     let feet = e.currentTarget.dataset.feet
     let reject_invite = {

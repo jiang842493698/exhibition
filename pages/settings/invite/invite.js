@@ -39,13 +39,10 @@ Page({
           result,
           type: result.isOpen
         })
-        console.log("77777777777777")
-        console.log(result)
       }
     })
   },
   switch(e){
-    console.log(e)
     let value = e.detail.value
     let id = this.data.result.RecordId
     let data = {

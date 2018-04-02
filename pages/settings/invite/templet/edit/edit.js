@@ -122,7 +122,6 @@ Page({
         _this.setData({
           result
         })
-        console.log(result)
       }
     })
   },

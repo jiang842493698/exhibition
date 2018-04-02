@@ -22,7 +22,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("bbbbbbbbbbb")
     id = options.id
     type = options.type
     _this = this
@@ -60,13 +59,10 @@ Page({
         let result = res.result[0]
         let datas = this.data.datas
         for (let r of result.Group){
-          console.log(r.UserName)
           if (!datas.includes(r.UserName)){
-            console.log("1111111111")
             datas.push(r)
           }
-        }123
-        console.log(datas)
+        }
         _this.setData({
           datas
         })
@@ -76,7 +72,6 @@ Page({
 
   },
   onFilterInput(e){
-    console.log(e.detail.value)
     value = e.detail.value
     this.setData({
       filter : value

@@ -42,7 +42,6 @@ Page({
         },
         //如果用户取消授权，则提示授权失败
         fail: function (fail) {
-          console.log(fail);
           _this.setData({
             isCancelAuth: true
           })
@@ -77,59 +76,6 @@ Page({
     return reg.test(mob);
   },
   //获取验证码
-  
-  // onGetCode: function (e) {
-
-  //   if (this.varMob(mob)) {
-  //     let isjy = _this.data.isjy;
-  //     if (!isjy) {
-  //       _this.setData({
-  //         isload: true,
-  //         isjy: true,
-  //         btn_getCode: '发送中'
-  //       })
-  //       verCode.post1(mob).then(res => {
-  //         console.log(res)
-  //         if (res.resCode === 0) {
-  //           let s = 60;
-  //           let index = setInterval(() => {
-  //             s--;
-  //             let btn_getCode;
-  //             let gb = false;
-  //             if (s <= 0) {
-  //               btn_getCode = "获取验证码"
-  //               gb = true;
-  //             } else {
-  //               btn_getCode = `${s}s`
-  //             }
-  //             _this.setData({
-  //               btn_getCode,
-  //               isjy: !gb
-  //             })
-  //             if (gb) {
-  //               clearInterval(index);
-  //             }
-
-  //           }, 1000)
-  //           _this.setData({
-  //             code: res.result,
-  //             isload: false
-  //           })
-  //           $.service.showToast({ title: '发送成功' });
-  //         }
-  //       }, err => {
-  //         _this.setData({
-  //           isload: false,
-  //           isjy: false
-  //         })
-  //       })
-  //     }
-
-  //   } else {
-  //     $.service.alert({ title: '手机号码错误', image: '/assets/images/icon/fail.png' });
-  //   }
-
-  // },
 
   onLogin: function () {
     
@@ -152,12 +98,10 @@ Page({
       }
     }
     $.request.exLogin().post(mob,code).then(res => {
-      console.log(212121)
+      
       if (res.resCode == 0) {
-        console.log(res)
+        
         userInfo = res.result[0];
-        console.log(329)
-        console.log(userInfo)
         wx.setStorage({
           key: 'userInfo',
           data: userInfo
@@ -187,22 +131,16 @@ Page({
         });
       }
     })
-    console.log(444)
     let a = wx.getStorage({
       key: 'userInfo'
     })
-    console.log(a)
 
-    // } 
-    // else {
-    //     $.service.alert({ title: '验证码错误', image: '/assets/images/icon/fail.png' });
-    // }
-    // })
+    
 
   },
   onShareAppMessage: function (e) {
     return {
-      path: '/pages/customer/index',
+      
       success: function (res) {
         // 转发成功
         wx.showToast({

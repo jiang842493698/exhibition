@@ -41,7 +41,7 @@ Page({
         let intervalTime = result.IntervalTime
         let LunchStartTime = result.LunchStartTime
         let LunchEndTime = result.LunchEndTime
-        console.log(result)
+        
         this.setData({
           result,
           startDate,
@@ -64,7 +64,7 @@ Page({
   date(e){
     let date = e.currentTarget.dataset.date
     if (date == "startDate"){
-      console.log(e)
+      
       let startDate = e.detail.value.replace(/-/g,"/")
       this.setData({
           startDate
@@ -96,10 +96,8 @@ Page({
     }
   },
   onIntervalTime(e){
-    console.log(e)
     let intervalTimeArray = ["30","40","50","60"]
     let intervalTime = e.detail.value
-    console.log(intervalTime)
     this.setData({
       intervalTime :intervalTimeArray[intervalTime]
     })
@@ -107,17 +105,14 @@ Page({
   onLunchTime(e){
     
     let date = e.currentTarget.dataset.date
-    console.log(e)
     if (date == "LunchStartTime") {
       let LunchStartTime = e.detail.value
-      console.log(LunchStartTime)
       this.setData({
         LunchStartTime
       })
     }
     if (date == "LunchEndTime") {
       let LunchEndTime = e.detail.value
-      console.log(LunchEndTime)
       this.setData({
         LunchEndTime
       })

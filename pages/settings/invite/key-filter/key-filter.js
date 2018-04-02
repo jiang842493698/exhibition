@@ -32,7 +32,6 @@ Page({
     this.onSelect()
   },
   onChoose(e){
-    console.log(e.currentTarget.dataset.value)
     let keyWords = e.currentTarget.dataset.value
     this.setData({
       keyWords
@@ -47,7 +46,6 @@ Page({
           result,
           KeyWord
         })
-        console.log(result)
       }
     })
   },
@@ -65,7 +63,6 @@ Page({
   
   },
   onKeywords:function(e){
-    console.log(e)
     let keyWords = e.detail.value;
     this.setData({
       keyWords

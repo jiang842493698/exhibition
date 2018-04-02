@@ -85,15 +85,14 @@ Component({
           }
         })
       }
-      console.log(this)
+      
 
 
     },
     _onSelected(e) {
       let index = e.currentTarget.dataset.index;
       let values = e.currentTarget.dataset.value;
-      console.log(index)
-      console.log(value)
+   
       value = values
       this.setData({
         value

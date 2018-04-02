@@ -20,7 +20,7 @@ class wxHelper {
      */
     TimeStampFormat(source, format = 'yyyy-MM-dd') {
         try {
-          console.log(source)
+          
             var num = source.replace("/Date(", "").replace(")/", "");
             var date = new Date(parseInt(num));
             var o = {
@@ -39,7 +39,6 @@ class wxHelper {
                     format = format.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
             return format;
         } catch (e) {
-            console.log(e.description);
             return source;
         }
     }

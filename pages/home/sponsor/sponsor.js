@@ -57,21 +57,16 @@ Page({
     console.dir(e);
     let endX = e.changedTouches[0].clientX;
     let index = e.currentTarget.dataset.index;
-    console.log('startX', this.startX)
-    console.log('endX', endX);
+    
     if (this.startX - endX > 80) {
       this.setData({
         delete_index: index,
       })
-      console.log("222222")
-      console.log(this.data.delete_index)
     } else if (endX - this.startX > 80) {
       
       this.setData({
         delete_index: -1,
       })
-      console.log("1111111111")
-      console.log(this.data.delete_index)
     }
   },
   //手指触摸动作开始 记录起点X坐标
@@ -183,8 +178,6 @@ Page({
         _this.setData({
           message: inviteArray
         })
-        console.log("PPPPPPPPPPPPPPPPPPPPPPPPPPPPP")
-        console.log(inviteArray)
         let updatearrayal = []
         
         for (let r of result) {
@@ -196,7 +189,6 @@ Page({
         let updateData = { updatearrayal }
         MsgInfo.put(updateData).then(ress => {
           if (ress.resCode == "0") {
-            console.log("修改成功")
           }
         })
 

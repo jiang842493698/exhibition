@@ -30,9 +30,9 @@ Page({
   },
   onselect(){
     let userInfo = wx.getStorageSync("userInfo")
-    console.log(userInfo)
+   
     let exInfo = wx.getStorageSync("exInfo")
-    console.log(exInfo)
+    
     let startYear = new Date(exInfo.StartTime).getFullYear()
     let endYear = new Date(exInfo.EndTime).getFullYear()
     let startMonth = new Date(exInfo.StartTime).getMonth()+1

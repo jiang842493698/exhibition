@@ -95,7 +95,7 @@ class HttpResource {
                 return response
             },
             responseError: (responseError) => {
-              console.log(responseError)
+              
               if (responseError.errMsg == "request:fail timeout"){
                 wx.showModal({
                   title: '提示',

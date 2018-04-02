@@ -18,11 +18,8 @@ class wxDataStorage {
     _init() {
         //获取的数据处理
         let dataFun = (key, res, fun) => {
-          console.log(555)
-          console.log(res)
-          console.log(fun)
+          
             if (res.resCode == 0) {
-              console.log(res.result)
                 wx.setStorageSync(key, res.result);
                 if (typeof fun === 'function') {
                   fun(res.result);
@@ -43,8 +40,7 @@ class wxDataStorage {
              * @param {any} fun 回调方法 返回数据列表
              */
             LINKS: (fun) => {
-              console.log(333)
-                console.log(this.http.link())
+             
                 this.http.link().get().then(res => {
                     dataFun('LINKS', res, fun);
                 })
@@ -56,9 +52,7 @@ class wxDataStorage {
              */
             LINK_GROUPS: (fun) => {
                 let userInfo = wx.getStorageSync('userInfo');
-                console.log(16794)
-                console.log(userInfo)
-                console.log(userInfo.TenantId)
+                
                 let groupData = {
                   tenantId: userInfo.TenantId,
                   userId : userInfo.UserId,
@@ -66,7 +60,7 @@ class wxDataStorage {
                     condition : {}
                   }
                 }
-                console.log(groupData)
+               
                 this.http.group().post(groupData).then(res => {
                     dataFun('LINK_GROUPS', res, fun);
                 })
@@ -88,8 +82,7 @@ class wxDataStorage {
              */
             MATCH_EXS: (fun) => {
                 this.http.matchEx().get().then(res => {
-                    console.log("5555555555")
-                    console.log(res)
+                    
                     dataFun('MATCH_EXS', res, fun);
                 })
             },

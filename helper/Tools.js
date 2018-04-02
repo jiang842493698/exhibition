@@ -649,10 +649,10 @@ class Tools {
    */
   longestPalindrdome (s) {
     var t = s.split("").join("#");
-    console.log(t)
+    
     var c = 1, e = 0, cs = 0;
     t = "~" + t + "#";
-    console.log(t)
+    
     for (var j = 1, lenj = t.length - 1; j < lenj; j++ , c = 1) {
       while (t[j + c] === t[j - c]) {
         c++;

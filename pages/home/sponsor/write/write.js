@@ -61,7 +61,6 @@ Page({
   
   },
   onTitle(e){
-    console.log(e.detail.value)
     title = e.detail.value
   },
   writeSMS(e){
@@ -88,7 +87,6 @@ Page({
       data.VisitorReceiver = "000000000000000000000001"
       data.Type = "3"
     }
-    console.log(data)
     $.request.MsgInfo().insert(data).then(res => {
       if (res.resCode == 0) {
         wx.navigateBack({
@@ -96,7 +94,6 @@ Page({
         })
       }
     })
-    console.log(e.currentTarget.dataset.type)
   },
   /**
    * 用户点击右上角分享

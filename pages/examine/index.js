@@ -76,12 +76,11 @@ Page({
     }
 
     $.request.InvitationInfoExhi().getAll(data,page).then(res => {
-      console.log("gggggggggggggggggggggg")
+      
       if (res.resCode == 0 || res.resCode == 10000) {
-        console.log("/////////////////////////")
         let result = res.result
         let InvitationInfoExhi = (_this.data.InvitationInfoExhi == null ? [] : _this.data.InvitationInfoExhi).concat(result)
-       console.log("ooooooooooooooooooooooo")
+       
         for (let i of InvitationInfoExhi) {
           let centent
           if (i.InvitationMsgContent != null && i.InvitationMsgContent!=""){
@@ -102,7 +101,6 @@ Page({
           }
           
         }
-        console.log("9999999999999999999999")
         _this.setData({
           InvitationInfoExhi
         })
@@ -135,8 +133,6 @@ Page({
         _this.setData({
           matchVInfo
         })
-        console.log("展商发观众")
-        console.log(matchVInfo)
       }
     })
 
@@ -154,7 +150,6 @@ Page({
     this.onInvite()
   },
   onAgree(e){
-    console.log(e)
     let id = e.currentTarget.dataset.id
     let feet = e.currentTarget.dataset.feet
     let newDate = new Date();
@@ -169,7 +164,7 @@ Page({
     if (feet == "展商") {
       $.request.InvitationInfoExhi().put(data).then(res => {
         if (res.resCode == 0 /*&& res.result.nRecordMatched == "1" && res.result.nRecordUpdated == "1"*/) {
-          console.log("aaaaaaaaaa")
+          
           _this.onLoad()
         }
       })
@@ -177,7 +172,7 @@ Page({
     if (feet == "观众") {
       $.request.matchVInfo().put(data).then(res => {
         if (res.resCode == 0 /*&& res.result.nRecordMatched == "1" && res.result.nRecordUpdated == "1"*/) {
-          console.log("aaaaaaaaaa")
+          
           _this.onLoad()
         }
       })
@@ -334,7 +329,6 @@ Page({
     }, 1500)
   },
   onCancel(e) {
-    console.log("bbbbbbbb")
     let id = e.currentTarget.dataset.id
     let feet = e.currentTarget.dataset.feet
     let reject_invite = {
@@ -367,8 +361,6 @@ Page({
         m.isSelect = !_this.data.isSelect
       }
     }
-    console.log(matchVInfo)
-    console.log(InvitationInfoExhi)
     _this.setData({
       isShow : !this.data.isShow,
       isSelect: !_this.data.isSelect,
